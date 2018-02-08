@@ -1,0 +1,602 @@
+@font-face {
+	font-family: 'Avenir Next Cyr';
+	src: url('../fonts/AvenirNextCyr-Light.eot');
+	src: url('../fonts/AvenirNextCyr-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvenirNextCyr-Light.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Avenir Next Cyr';
+	src: url('../fonts/AvenirNextCyr-Medium.eot');
+	src: url('../fonts/AvenirNextCyr-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvenirNextCyr-Medium.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next Cyr';
+	src: url('../fonts/AvenirNextCyr-Demi.eot');
+	src: url('../fonts/AvenirNextCyr-Demi.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvenirNextCyr-Demi.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Demi.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next Cyr';
+	src: url('../fonts/AvenirNextCyr-Bold.eot');
+	src: url('../fonts/AvenirNextCyr-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvenirNextCyr-Bold.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'GT-Eesti-Pro-Display';
+	src: url('../fonts/GTEestiProDisplay-Regular.eot');
+	src: url('../fonts/GTEestiProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/GTEestiProDisplay-Regular.woff2') format('woff2'),
+			url('../fonts/GTEestiProDisplay-Regular.woff') format('woff'),
+			url('../fonts/GTEestiProDisplay-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'GT-Eesti-Pro-Display';
+	src: url('../fonts/GTEestiProDisplay-Medium.eot');
+	src: url('../fonts/GTEestiProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/GTEestiProDisplay-Medium.woff2') format('woff2'),
+			url('../fonts/GTEestiProDisplay-Medium.woff') format('woff'),
+			url('../fonts/GTEestiProDisplay-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+	padding: 10px;
+	font-size: 16px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: 300;
+  color: rgba(39, 41, 48, 0.8);
+	background-color: #e2e4f7;
+}
+
+.container {
+	width: 100%;
+	max-width: 1248px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0 auto;
+	padding-right: 26px;
+	padding-left: 26px;
+}
+
+.header {
+	background-color: #f4f5ff;
+}
+
+.main-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	border-bottom: 1px solid #dadbe6;
+}
+
+.main-menu-left{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.main-menu-right{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.main-menu a {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 14px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #272930;
+	line-height: 56px;
+	-webkit-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+a.menu-item,
+a.search-icon {
+	overflow: hidden;
+	height: 0;
+	border-bottom: 0;
+}
+
+a.menu-item-active,
+a.search-icon-active{
+	height: auto;
+	overflow: auto;
+
+}
+a.menu-item-active {
+	border-bottom: 1px solid #dadbe6;
+}
+.main-menu .menu-icon {
+	position: relative;
+	min-width: 63px; /* спорное свойство */
+	left: -10px;
+	top: -29px;
+	padding-left: 30px; /* спорное свойство */
+	border-bottom: none;
+	-webkit-box-ordinal-group: -1;
+	    -ms-flex-order: -2;
+	        order: -2;
+}
+.menu-icon span {
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	width: 18px;
+	height: 2px;
+	background-color: #272930;
+	-webkit-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+.menu-icon .line-top {
+	margin-top: -3px;
+}
+.menu-icon .line-bottom {
+	margin-top: 3px;
+}
+.menu-icon-active .line-top {
+	margin-top: 0;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+.menu-icon-active .line-bottom {
+	margin-top: 0;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+.main-menu .logo {
+	-webkit-box-flex: 2;
+	    -ms-flex-positive: 2;
+	        flex-grow: 2;
+	-webkit-box-ordinal-group: 0;
+	    -ms-flex-order: -1;
+	        order: -1;
+	font-size: 18px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.main-menu .logo-active{
+	border-bottom: 1px solid #dadbe6;
+}
+
+.main-menu .search-icon {
+	padding-right: 30px;
+}
+.main-menu .search-icon img {
+	vertical-align: middle;
+}
+a.menu-item:hover {
+	line-height: 46px;
+	border-bottom: 3px solid #acb8f7;
+}
+
+a.menu-item:active {
+	opacity: 0.5;
+	line-height: 52px;
+	border-bottom: 3px solid #acb8f7;
+}
+
+.main {
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 90px;
+	overflow-x: hidden;
+	background-color: #f4f5ff;
+}
+.source {
+	margin-bottom: 23px;
+	font-size: 10px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(39, 41, 48, 0.251);
+}
+.title {
+	margin-bottom: 29px;
+	font-size: 36px;
+	font-family: 'GT-Eesti-Pro-Display', sans-serif;
+	font-weight: normal;
+	text-align: center;
+	color: #272930;
+}
+.author-and-date {
+	width: 100%;
+	max-width: 237px;
+	margin: 0 auto 24px auto;
+}
+.author-avatar {
+	vertical-align: middle;
+	-webkit-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+.author-name {
+	font-size: 12px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: 600;
+	color: #272930;
+	-webkit-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+.publication-date {
+	font-size: 12px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: 600;
+	color: rgba(39, 41, 48, 0.251);
+}
+.author-and-date .profile:hover .author-name {
+	color: #7d92ff;
+}
+.author-and-date .profile:active .author-name,
+.author-and-date .profile:active .author-avatar {
+	opacity: 0.5;
+}
+.echo-img {
+	margin-bottom: 29px;
+	text-align: center;
+}
+.description {
+	margin-bottom: 52px;
+	font-size: 18px;
+	font-family: 'GT-Eesti-Pro-Display', sans-serif;
+	font-weight: 500;
+	color: #272930;
+	text-align: center;
+}
+.product-information {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 50%;
+	max-width: 789px;
+	list-style: none;
+	margin: 0 auto 50px auto;
+	-webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+	        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+}
+.product-information li {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	min-width: 20%;
+	height: 60px;
+	padding-top: 10px;
+	text-align: center;
+	border-right: 2px solid #e7e7f0;
+	-webkit-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+.product-information li:last-child {
+	border: none;
+}
+.top-sign {
+	font-size: 16px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: normal;
+	color: #272930;
+}
+.bottom-sign {
+	font-size: 14px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: normal;
+	color: rgba(39, 41, 48, 0.4);
+}
+.product-information li:hover {
+	background-color: #e2e4f7;
+}
+.main-content {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	max-width: 789px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+.main-content p {
+	margin-bottom: 33px;
+	line-height: 1.778;
+}
+.content-images {
+	width: 100vw;
+	margin-right: -50vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+.content-images div {
+	padding-left: 25px;
+}
+.content-images div:first-child {
+	margin-left: -25px;
+}
+.wiki-link {
+	position: relative;
+	left: -10%;
+	float: left;
+	min-height: 160px;
+	margin-right: -8%;
+}
+.wiki-link a {
+	text-decoration: none;
+}
+.wiki-link-img {
+	margin-bottom: 25px;
+}
+.wiki-icon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 70px;
+	top: 90px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+	        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.wiki-icon img {
+	position: absolute;
+	left: 8px;
+	top: 10px;
+}
+.link-name {
+	display: block;
+	font-size: 16px;
+	font-family: "GT-Eesti-Pro-Display", sans-serif;
+	font-weight: 500;
+	line-height: 2.125;
+	text-align: center;
+	color: rgb(39, 41, 48);
+}
+.wiki-link a:hover,
+.wiki-link a:hover .link-name {
+	opacity: 0.9;
+}
+.wiki-link a:active,
+.wiki-link a:active .link-name {
+	opacity: 0.7;
+}
+.footer {
+	padding-top: 43px;
+	background-color: #e2e4f7;
+}
+.footer-title{
+	padding-bottom: 39px;
+	font-size: 24px;
+	font-family: 'GT-Eesti-Pro-Display', sans-serif;
+	font-weight: 500;
+	text-align: center;
+	color: #272930;
+}
+.article-items {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.arctiral-item {
+	max-width: 281px;
+	margin-right: 12px;
+	margin-left: 12px;
+	margin-bottom: 40px;
+	background-color: #ffffff;
+}
+.arctiral-item > a > img{
+	margin-bottom: 25px;
+}
+.text-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.arctiral-item h2{
+	padding-bottom: 35px;
+	font-size: 18px;
+	font-family: 'GT-Eesti-Pro-Display', sans-serif;
+	font-weight: normal;
+	text-align: center;
+	color: #272930;
+}
+.views-and-likes{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 12px 20px;
+}
+.views-and-likes div img{
+	display: inline-block;
+	margin-right: 6px;
+}
+.views-and-likes span{
+	display: inline-block;
+	font-size: 12px;
+	font-family: "Avenir Next Cyr", sans-serif;
+	font-weight: normal;
+  color: rgba(39, 41, 48, 0.251);
+}
+.arctiral-item:hover img,
+.arctiral-item:hover h2{
+	opacity: 0.9;
+}
+.arctiral-item:active img,
+.arctiral-item:active h2{
+	opacity: 0.7;
+}
+
+@media (min-width: 992px) {
+	.main-menu {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		border-bottom: 1px solid #dadbe6;
+	}
+	a.menu-item,
+	a.search-icon{
+		overflow: auto;
+		height: auto;
+	}
+	a.menu-item-active,
+	a.search-icon-active{
+ 		border-bottom: none;
+	}
+	.main-menu .menu-icon{
+		-webkit-box-ordinal-group: 1;
+		    -ms-flex-order: 0;
+		        order: 0;
+    left: 0;
+    top: 0;
+	}
+	.main-menu-left{
+		min-width: 33.3%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+	.main-menu-right{
+		min-width: 33.3%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+	.main-menu .logo {
+		-webkit-box-ordinal-group: 1;
+		    -ms-flex-order: 0;
+		        order: 0;
+		max-width: 33.3%;
+	}
+	.main-menu .logo-active{
+		border: none;
+	}
+	main{
+		padding-top: 87px;
+	}
+}
+
+@media (min-width: 768px) {
+	.product-information{
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		width: 100%;
+		margin: 0 auto 105px auto;
+	}
+	.title{
+		font-size: 48px;
+	}
+	.description {
+		margin-bottom: 52px;
+		font-size: 24px;
+	}
+	.wiki-link {
+		min-height: 240px;
+	}
+	.article-items {
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+	}
+	.arctiral-item {
+		margin-bottom: 140px;
+	}
+}
+
+@media (min-width: 576px) {
+	body {
+	font-size: 18px;
+	}
+}
