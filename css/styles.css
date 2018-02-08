@@ -113,6 +113,7 @@ body {
 }
 
 .main-menu {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -162,33 +163,35 @@ body {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #272930;
-	line-height: 56px;
+	line-height: 53px;
 	-webkit-transition: 0.25s ease-in-out;
 	transition: 0.25s ease-in-out;
+}
+.menu-item {
+	border-bottom: 3px solid transparent;
 }
 
 a.menu-item,
 a.search-icon {
 	overflow: hidden;
 	height: 0;
+}
+a.search-icon {
 	border-bottom: 0;
 }
 
 a.menu-item-active,
-a.search-icon-active{
+a.search-icon-active {
 	height: auto;
 	overflow: auto;
+}
 
-}
-a.menu-item-active {
-	border-bottom: 1px solid #dadbe6;
-}
 .main-menu .menu-icon {
-	position: relative;
-	min-width: 63px; /* спорное свойство */
-	left: -10px;
-	top: -29px;
-	padding-left: 30px; /* спорное свойство */
+	position: absolute;
+	top: 0;
+	min-width: 63px;
+	height: 56px;
+	padding-left: 30px;
 	border-bottom: none;
 	-webkit-box-ordinal-group: -1;
 	    -ms-flex-order: -2;
@@ -205,11 +208,9 @@ a.menu-item-active {
 	transition: 0.25s ease-in-out;
 }
 .menu-icon .line-top {
-	margin-top: -3px;
+	margin-top: -6px;
 }
-.menu-icon .line-bottom {
-	margin-top: 3px;
-}
+
 .menu-icon-active .line-top {
 	margin-top: 0;
 	-webkit-transform: rotate(45deg);
@@ -244,14 +245,12 @@ a.menu-item-active {
 	vertical-align: middle;
 }
 a.menu-item:hover {
-	line-height: 46px;
-	border-bottom: 3px solid #acb8f7;
+	border-color: #acb8f7;
 }
 
 a.menu-item:active {
 	opacity: 0.5;
-	line-height: 52px;
-	border-bottom: 3px solid #acb8f7;
+	border-color: #acb8f7;
 }
 
 .main {
@@ -528,7 +527,6 @@ a.menu-item:active {
 		overflow: auto;
 		height: auto;
 	}
-	a.menu-item-active,
 	a.search-icon-active{
  		border-bottom: none;
 	}
@@ -536,8 +534,7 @@ a.menu-item:active {
 		-webkit-box-ordinal-group: 1;
 		    -ms-flex-order: 0;
 		        order: 0;
-    left: 0;
-    top: 0;
+		position: relative;
 	}
 	.main-menu-left{
 		min-width: 33.3%;
@@ -564,6 +561,12 @@ a.menu-item:active {
 	}
 	main{
 		padding-top: 87px;
+	}
+}
+
+@media (max-width: 991px) {
+	.menu-item:not(.menu-item-active) {
+		border-bottom: 0 none;
 	}
 }
 
