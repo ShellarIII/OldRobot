@@ -253,6 +253,15 @@ a.menu-item:active {
 	border-color: #acb8f7;
 }
 
+.progress_bar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #acb8f7;
+	height: 3px;
+	z-index: 2;
+}
+
 .main {
 	position: relative;
 	padding-top: 40px;
@@ -379,22 +388,19 @@ a.menu-item:active {
 	margin-bottom: 33px;
 	line-height: 1.778;
 }
+
 .content-images {
 	width: 100vw;
-	margin-right: -50vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
 }
-.content-images div {
-	padding-left: 25px;
+
+.content-images .swiper-slide {
+	width: auto;
 }
-.content-images div:first-child {
-	margin-left: -25px;
-}
+
 .wiki-link {
 	position: relative;
 	left: -10%;
